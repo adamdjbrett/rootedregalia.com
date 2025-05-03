@@ -1,6 +1,15 @@
 ---
 layout: base.njk
 ---
+
+ <section class="blog-hero">
+        <div class="container blog-hero-content">
+            <span class="blog-meta"><i class="fa-regular fa-calendar"></i> <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time> &nbsp;/span>
+            <h1 class="display-5 fw-bold">How to Start Your Own Urban Garden</h1>
+        </div>
+    </section>
+
+
 <div class="message-box">
 	<ol>
 		<li>Edit <code>_data/metadata.js</code> with your blog’s information.</li>

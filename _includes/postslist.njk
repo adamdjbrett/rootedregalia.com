@@ -1,9 +1,15 @@
-{%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
-<ol reversed class="postlist">
-{% for post in postslist | reverse %}
-	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-	</li>
-{% endfor %}
-</ol>
+    <section class="container py-5" id="blog">
+        <h2 class="section-title">{{blog.title}}</h2>
+        <div class="row">{% for post in postslist | reverse %}
+            <div class="col-md-4">
+                <div class="blog-card">
+                    {% if post.data.image %}<img src="{{post.data.image}}" alt="{{post.data.title}}" class="blog-img">{% endif %}
+                    <div class="blog-body">
+                        <small class="blog-date"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></small>
+                        <h5 class="blog-title mt-2">{{post.data.title}}</h5>
+                        <p>{{post.data.description}}</p>
+                        <a href="{{post.url}}" class="btn btn-card btn-sm text-white">{{metadata.widget.button.blog}}</a>
+                    </div>
+                </div>
+            </div>{% endfor %}
+    </section>
