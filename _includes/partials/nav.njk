@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand" href="{{metadata.url}}">
+<img src="{{metadata.navbar.logo}}" alt="{{metadata.navbar.title}}">
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto align-items-center">
+{% for s in metadata.navbar.list %}<li class="nav-item">
+<a class="nav-link" href="{{s.url}}">{{s.nav}}</a>
+</li>{% endfor %}
+<li class="nav-item ms-lg-3">
+<a class="btn btn-order" href="{{metadata.navbar.button.url}}">{{metadata.navbar.button.title}}</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>

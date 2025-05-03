@@ -1,0 +1,18 @@
+    <section class="container py-5" id="products">
+        <h2 class="section-title">{{products.title}}</h2>
+        <div class="row">{% for p in collections.products |reverse  | limit(6) %}
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    {% if p.data.image %}<a href="{{p.url}}"><img src="{{p.data.image}}" class="card-img-top" alt="{{p.data.title}}"></a>{% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{p.data.title}}</h5>
+                        <p class="card-text">{{p.data.description}}</p>
+                        <a href="{{p.url}}" class="btn btn-card text-white">{{metadata.widget.button.product}}</a>
+                    </div>
+                </div>
+            </div>{% endfor %}
+        <div class="text-center mt-4">
+            <a href="{{products.button.url}}" class="btn btn-order">{{products.button.text}}</a>
+        </div>
+        </div>
+    </section>

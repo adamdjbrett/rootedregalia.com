@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Order | Nature Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #606C38;
+            --dark-green: #283618;
+            --cream: #FEFAE0;
+            --light-brown: #DDA15E;
+            --dark-brown: #BC6C25;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-green);
+            padding-top: 76px;
+        }
+        .navbar {
+            background-color: var(--dark-green);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img { height: 40px; }
+        .nav-link {
+            color: var(--cream) !important;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .nav-link:hover { color: var(--light-brown) !important; }
+        .btn-order {
+            background-color: var(--light-brown);
+            color: var(--dark-green);
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-order:hover {
+            background-color: var(--dark-brown);
+            color: var(--cream);
+            transform: translateY(-3px);
+        }
+        .bulk-hero {
+            background: linear-gradient(rgba(40,54,24,0.8), rgba(40,54,24,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            color: var(--cream);
+        }
+        .bulk-hero-content {
+            padding: 50px 0;
+        }
+        .bulk-form-section {
+            margin-top: -80px;
+            z-index: 2;
+            position: relative;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        .form-control {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-control:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(96, 108, 56, 0.15);
+        }
+        .btn-bulk {
+            background-color: var(--primary-green);
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 12px 35px;
+            border: none;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn-bulk:hover {
+            background-color: var(--dark-brown);
+            color: var(--cream);
+        }
+        .section-title {
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            margin-bottom: 10px;
+            font-size: 1.02rem;
+        }
+        .step-icon {
+            color: var(--light-brown);
+            margin-right: 12px;
+        }
+        .bulk-info {
+            background: #fff8ef;
+            border-left: 6px solid var(--light-brown);
+            padding: 25px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        footer {
+            background: var(--dark-green);
+            color: var(--cream);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://placehold.co/80x40?text=LOGO" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-order" href="bulkorder.html">Order Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Bulk Order -->
+    <section class="bulk-hero">
+        <div class="container bulk-hero-content text-center">
+            <h1 class="display-5 fw-bold">Bulk Order Request</h1>
+            <p class="lead mt-3">For businesses, resellers, or large personal needs. Get the best pricing and priority service for every bulk order—direct from trusted organic sources.</p>
+        </div>
+    </section>
+
+    <!-- Bulk Order Info & Form -->
+    <section class="container bulk-form-section">
+        <div class="row justify-content-center">
+            <!-- Bulk Order Info -->
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <div class="bulk-info">
+                    <h3 class="mb-3" style="color:var(--dark-brown);">How to Place a Bulk Order?</h3>
+                    <ul class="step-list">
+                        <li><i class="fas fa-clipboard-list step-icon"></i>Isi & kirim form pesanan di samping dengan lengkap.</li>
+                        <li><i class="fas fa-envelope-open-text step-icon"></i>Kami akan menghubungi Anda untuk detail dan penawaran harga.</li>
+                        <li><i class="fas fa-shipping-fast step-icon"></i>Setujui pesanan & lakukan pembayaran, lalu kami proses pengiriman.</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h5 class="mb-2"><i class="fas fa-question-circle step-icon"></i>Butuh Bantuan?</h5>
+                        <p class="mb-1">Email: <a href="mailto:sales@naturegallery.com">sales@naturegallery.com</a></p>
+                        <p>WA/Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    </div>
+                </div>
+                <div class="alert alert-warning">
+                    <i class="fas fa-info-circle me-2"></i> Bulk order minimal 20kg atau 1 dus produk, diskon hingga <b>25%</b>!
+                </div>
+            </div>
+            <!-- Bulk Order Form -->
+            <div class="col-lg-7">
+                <div class="contact-form shadow">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Company/Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" placeholder="Estimated Quantity (kg, box, etc)" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" rows="4" placeholder="Order Details / Product List" required></textarea>
+                        <input type="text" class="form-control" placeholder="Delivery Address" required>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-bulk">Submit Bulk Order</button>
+                        </div>
+                        <div class="form-text text-center mt-2">
+                            *Form notifikasi otomatis, tidak untuk transaksi langsung.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / FAQ -->
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <h2 class="section-title mb-3">Frequently Asked Bulk Questions</h2>
+            <div class="accordion accordion-flush mx-auto" style="max-width:650px;" id="faqBulkOrder">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                            Apa saja produk yang bisa dibeli grosir?
+                        </button>
+                    </h3>
+                    <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faqBulkOrder">
+                        <div class="accordion-body">
+                            Semua produk segar Nature Gallery: buah, sayur, rempah, dan produk olahan organik. Jika ada permintaan khusus, tulis di form.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                            Berapa lama proses konfirmasi dan pengiriman bulk order?
+                        </button>
+                    </h3>
+                    <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqBulkOrder">
+                        <div class="accordion-body">
+                            Tim kami akan menghubungi Anda dalam 1×24 jam. Pengiriman disesuaikan dengan jumlah stok dan alamat tujuan (rata-rata 2-5 hari kerja).
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                            Apakah ada layanan custom packing atau reseller dropship?
+                        </button>
+                    </h3>
+                    <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqBulkOrder">
+                        <div class="accordion-body">
+                            Ya, tersedia custom packing dan layanan dropship. Silakan cantumkan permintaan di form atau hubungi sales kami.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <a href="index.html" class="btn btn-order me-3"><i class="fas fa-home"></i> Kembali ke Home</a>
+                <a href="gallery.html" class="btn btn-bulk"><i class="fas fa-images"></i> Lihat Galeri Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <img src="https://placehold.co/60x30?text=LOGO" alt="Logo" class="mb-2">
+            <p class="mb-2">&copy; 2025 Nature Gallery. All Rights Reserved.</p>
+            <div>
+                <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and FontAwesome JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
+
+
+
