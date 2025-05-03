@@ -1,0 +1,7 @@
+<section class="hero d-flex align-items-center" id="home" style="background: linear-gradient(rgba(40, 54, 24, 0.7), rgba(40, 54, 24, 0.7)), url('{{hero.image or image}}') center/cover no-repeat;">
+<div class="container hero-content text-center">
+<h1>{{ hero.title or title }}</h1>
+<h2 class="lead mb-5">{{hero.text or description }}</h2>
+{% for b in hero.button %}<a href="{{b.url}}" class="btn btn-order btn-lg me-2">{{b.text}}</a>{% endfor %}
+</div>
+</section>

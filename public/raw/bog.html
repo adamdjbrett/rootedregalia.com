@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Start Your Own Urban Garden | Nature Gallery Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #606C38;
+            --dark-green: #283618;
+            --cream: #FEFAE0;
+            --light-brown: #DDA15E;
+            --dark-brown: #BC6C25;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-green);
+        }
+        .navbar {
+            background-color: var(--dark-green);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img { height: 40px; }
+        .nav-link {
+            color: var(--cream) !important;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .nav-link:hover { color: var(--light-brown) !important; }
+        .btn-order, .btn-card {
+            background-color: var(--light-brown);
+            color: var(--dark-green);
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-order:hover, .btn-card:hover {
+            background-color: var(--dark-brown);
+            color: var(--cream);
+            transform: translateY(-3px);
+        }
+        .blog-hero {
+            background: linear-gradient(rgba(40,54,24,0.7), rgba(40,54,24,0.7)), url('https://source.unsplash.com/900x400/?garden,urban') center/cover no-repeat;
+            height: 350px;
+            display: flex;
+            align-items: flex-end;
+            color: var(--cream);
+            position: relative;
+        }
+        .blog-hero-content {
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        .blog-meta {
+            color: #bdb88d;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+        .blog-content {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+            padding: 2.5rem 2rem 2rem 2rem;
+            margin-top: -100px;
+            position: relative;
+            z-index: 5;
+        }
+        .blog-content h1 {
+            font-size: 2.3rem;
+            color: var(--dark-brown);
+            margin-bottom: 1rem;
+        }
+        .blog-content h2 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .blog-content img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+        .related-articles .card {
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border: none;
+        }
+        .related-articles .card-img-top {
+            height: 140px;
+            object-fit: cover;
+        }
+        .related-articles .card-title {
+            font-size: 1.05rem;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+        .section-title {
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        footer {
+            background: var(--dark-green);
+            color: var(--cream);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://placehold.co/80x40?text=LOGO" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-order" href="index.html#bulkorder">Order Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container blog-hero-content">
+            <span class="blog-meta"><i class="fa-regular fa-calendar"></i> April 2025 &nbsp;|&nbsp; <i class="fa-regular fa-user"></i> By Nature Gallery Team</span>
+            <h1 class="display-5 fw-bold">How to Start Your Own Urban Garden</h1>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="container">
+        <div class="blog-content shadow">
+            <h1>How to             Start Your Own Urban Garden</h1>
+            <p class="lead">Step-by-step guide and best practices for growing vegetables in small spaces. Whether you have a balcony, rooftop, or a tiny backyard, you can enjoy fresh produce at home!</p>
+            
+            <img src="https://source.unsplash.com/800x350/?urban,garden" alt="Urban Garden" class="my-3">
+
+            <h2>Why Urban Gardening?</h2>
+            <p>Urban gardening allows city dwellers to cultivate their own fruits, vegetables, and herbs, improving health and reducing grocery costs. It also helps refresh your home environment, supports local biodiversity, and reduces your carbon footprint.</p>
+            
+            <h2>Step 1: Assess Your Space</h2>
+            <p>Start by analyzing available spaces at your home. Balconies, windowsills, rooftops, and even vertical walls can be transformed into flourishing gardens. Make sure your chosen spot receives enough sunlight—most vegetables need at least 4-6 hours of sun per day.</p>
+
+            <h2>Step 2: Choose the Right Containers</h2>
+            <p>Don’t have soil beds? No problem! Use pots, recycled buckets, grow bags, or hanging baskets. Ensure your containers have drainage holes to prevent root rot.</p>
+
+            <h2>Step 3: Pick Suitable Plants</h2>
+            <p>For beginners, choose easy-to-grow crops such as tomatoes, lettuce, spinach, radishes, or herbs like basil and mint. Consider your region's climate and sunlight when picking plants.</p>
+
+            <h2>Step 4: Use Quality Soil & Compost</h2>
+            <p>Urban spaces often need soil improvement. Use a mix of high-quality potting soil and organic compost for healthy, productive plants.</p>
+            
+            <img src="https://source.unsplash.com/800x300/?compost,planting" alt="Urban Compost">
+
+            <h2>Step 5: Water and Care</h2>
+            <p>Urban gardens may dry out faster due to wind and sun. Check soil moisture regularly, water deeply but infrequently, and use mulch to conserve moisture.</p>
+            
+            <h2>Step 6: Enjoy and Learn</h2>
+            <p>Harvest regularly, replant when needed, and experiment! Gardening is an ongoing journey—don’t be afraid to try new plants or techniques.</p>
+            
+            <blockquote class="blockquote my-4">
+                <p class="mb-0">“To plant a garden is to believe in tomorrow.”</p>
+                <footer class="blockquote-footer">Audrey Hepburn</footer>
+            </blockquote>
+            
+            <h2>Urban Gardening Tips</h2>
+            <ul>
+                <li>Start small and expand as you gain confidence.</li>
+                <li>Consider vertical gardening to maximize limited space.</li>
+                <li>Collect rainwater for sustainable watering.</li>
+                <li>Join a local gardening community or online group for advice.</li>
+            </ul>
+            
+            <div class="d-flex justify-content-between mt-4">
+                <a href="index.html#blog" class="btn btn-card"><i class="fa fa-arrow-left"></i> Back to Blog</a>
+                <a href="index.html#contact" class="btn btn-order">Contact Us</a>
+            </div>
+        </div>
+        
+        <!-- Related Articles -->
+        <section class="related-articles my-5">
+            <h3 class="section-title">Related Articles</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img src="https://source.unsplash.com/400x200/?bees,organic" class="card-img-top" alt="Bees">
+                        <div class="card-body">
+                            <h5 class="card-title">The Importance of Bees in Organic Farming</h5>
+                            <p class="card-text" style="font-size:0.95rem;">Discover how bees contribute to sustainable agriculture and ecosystem preservation.</p>
+                            <a href="#" class="btn btn-card btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img src="https://source.unsplash.com/400x200/?healthy,food" class="card-img-top" alt="Healthy Food">
+                        <div class="card-body">
+                            <h5 class="card-title">Seasonal Eating: A Guide to Better Health</h5>
+                            <p class="card-text" style="font-size:0.95rem;">Why eating seasonally benefits your health, the environment, and your local community.</p>
+                            <a href="#" class="btn btn-card btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img src="https://source.unsplash.com/400x200/?vegetable,garden" class="card-img-top" alt="Vegetable Garden">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner’s Guide: Growing Vegetables on Your Balcony</h5>
+                            <p class="card-text" style="font-size:0.95rem;">Simple steps for starting a productive vegetable garden in urban areas.</p>
+                            <a href="#" class="btn btn-card btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <img src="https://placehold.co/60x30?text=LOGO" alt="Logo" class="mb-2">
+            <p class="mb-2">&copy; 2025 Nature Gallery. All Rights Reserved.</p>
+            <div>
+                <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and FontAwesome JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
+
+
+
+
