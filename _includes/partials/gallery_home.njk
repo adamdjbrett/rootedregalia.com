@@ -1,16 +1,35 @@
-
-    <section class="py-5" style="background-color: #f8f9fa;" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Our Gallery</h2>
-            <div class="row g-3">{% for i in collections.galleries | reverse | limit(6) %}
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{i.url}}"><img src="{{i.data.image}}" alt="{{i.title}}" class="gallery-img"></a>
-                    </div>
-                </div>{% endfor %}
-            </div>
-            <div class="text-center mt-4">
-                <a href="{{gallery.button.url}}" class="btn btn-order">{{gallery.button.text}}</a>
-            </div>
+<section class="py-5" style="background-color: #f8f9fa;" id="gallery">
+ 
+  <div class="container">
+    <h2 class="section-title">Our Gallery</h2>
+    <div class="row g-3">
+      {% for i in collections.galleries | reverse | limit(6) %}
+      {% set uniqueId = "gallery-" + loop.index %}
+      <div class="col-md-4">
+        <div class="gallery-item">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#{{uniqueId}}Modal">
+            <img src="{{i.data.image}}" alt="{{i.data.title}}" class="gallery-img">
+          </a>
         </div>
-    </section>
+      </div>
+      <div class="modal fade" id="{{uniqueId}}Modal" tabindex="-1" aria-labelledby="{{uniqueId}}ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header green">
+              <h1 class="modal-title fs-5" id="{{uniqueId}}ModalLabel">{{i.data.title}}</h1>
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center">
+              <img class="img-fluid" alt="{{i.data.title}}" src="{{i.data.image}}"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="{{gallery.button.url}}" class="btn btn-order">{{gallery.button.text}}</a>
+    </div>
+  </div>
+</section>
+

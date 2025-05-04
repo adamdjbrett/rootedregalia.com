@@ -11,13 +11,15 @@ metasocial:
  - twitter: "https://x.com/user"
 
 navbar: 
- title: "rootedregalia.com"
+ title: "Rooted Regalia"
  logo: "/img/logo.png" 
  list: 
     - nav: Home
       url: /#
     - nav: About
       url: /#about
+    - nav: Product
+      url: /#products
     - nav: Blog
       url: /#blog
     - nav: Gallery
@@ -26,7 +28,7 @@ navbar:
       url: /#contact
  button: 
     title: Order Now
-    url: /#order
+    url: /order
 
 widget: 
  button: 

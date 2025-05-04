@@ -1,11 +1,6 @@
 # rootedregalia.com
 
-On Progress...
+![mockup](shoot.png)
 
-Todo: 
- + Static Article Page Design
- + Blog Design
- + Product Page Design
- + Gallery Page Design
- + Bulk Order Page Design
+Official site for https://www.rootedregalia.com
 

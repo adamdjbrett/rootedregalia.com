@@ -5,7 +5,7 @@
                 <div class="card shadow-sm">
                     {% if p.data.image %}<a href="{{p.url}}"><img src="{{p.data.image}}" class="card-img-top" alt="{{p.data.title}}"></a>{% endif %}
                     <div class="card-body">
-                        <h5 class="card-title">{{p.data.title}}</h5>
+                        <h3 class="card-title">{{p.data.title}}</h3>
                         <p class="card-text">{{p.data.description}}</p>
                         <a href="{{p.url}}" class="btn btn-card text-white">{{metadata.widget.button.product}}</a>
                     </div>

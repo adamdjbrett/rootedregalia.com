@@ -1,0 +1,49 @@
+---
+layout: base.njk
+---
+<section class="py-5" style="background-color: #f8f9fa;" id="gallery">
+<div class="container">
+        <div class="col-md-12 p-3">
+<h1 class="section-title mt-5">{{title}}</h1>
+<h2>{{description}}</h2>
+</div>
+<div class="row g-3">
+{% for i in pagination.items %}
+{% set uniqueId = "gallery-" + loop.index %}
+<div class="col-md-4">
+<div class="gallery-item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#{{uniqueId}}Modal">
+<img src="{{i.data.image}}" alt="{{i.data.title}}" class="gallery-img">
+</a>
+</div>
+</div>
+<div class="modal fade" id="{{uniqueId}}Modal" tabindex="-1" aria-labelledby="{{uniqueId}}ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header green">
+<h1 class="modal-title fs-5" id="{{uniqueId}}ModalLabel">{{i.data.title}}</h1>
+<button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body d-flex justify-content-center align-items-center">
+<img class="img-fluid" alt="{{i.data.title}}" src="{{i.data.image}}"/>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+<div class="row mt-5">
+<div class="col-6">
+{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="btn btn-card text-white p-2">
+<i class="fa-solid fa-arrow-left me-3"></i> Previous
+</a>{% endif %}
+</div>
+<div class="col-6 text-end">
+{% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="btn btn-card text-white p-2">
+Next <i class="fa-solid fa-arrow-right ms-3"></i>
+</a>{% endif %}
+</div>
+</div>
+</div>
+</section>
+
+
