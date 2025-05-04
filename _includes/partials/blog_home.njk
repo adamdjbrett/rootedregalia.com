@@ -6,7 +6,7 @@
                     {% if post.data.image %}<a href="{{post.url}}"><img src="{{post.data.image}}" alt="{{post.data.title}}" class="blog-img"></a>{% endif %}
                     <div class="blog-body">
                         <small class="blog-date"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></small>
-                        <h5 class="blog-title mt-2">{{post.data.title}}</h5>
+                        <h3 class="blog-title mt-2">{{post.data.title}}</h3>
                         <p>{{post.data.description}}</p>
                         <a href="{{post.url}}" class="btn btn-card btn-sm text-white">{{metadata.widget.button.blog}}</a>
                     </div>

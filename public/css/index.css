@@ -302,3 +302,67 @@
       max-height: 80vh;
       object-fit: contain;
     }
+
+        .bulk-hero-content {
+            padding: 50px 0;
+        }
+        .bulk-form-section {
+            margin-top: -80px;
+            z-index: 2;
+            position: relative;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        .form-control {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-control:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(96, 108, 56, 0.15);
+        }
+        .btn-bulk {
+            background-color: var(--primary-green);
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 12px 35px;
+            border: none;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn-bulk:hover {
+            background-color: var(--dark-brown);
+            color: var(--cream);
+        }
+        .section-title {
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            margin-bottom: 10px;
+            font-size: 1.02rem;
+        }
+        .step-icon {
+            color: var(--light-brown);
+            margin-right: 12px;
+        }
+        .bulk-info {
+            background: #fff8ef;
+            border-left: 6px solid var(--light-brown);
+            padding: 25px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }

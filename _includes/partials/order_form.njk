@@ -1,0 +1,43 @@
+    <section class="container bulk-form-section">
+        <div class="row justify-content-center">
+            <!-- Bulk Order Info -->
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <div class="bulk-info">
+                    <h3 class="mb-3" style="color:var(--dark-brown);">{{info.title}}</h3>
+                    <ul class="step-list">
+                        {% for i in how_to.info %}<li><i class="{{i.icon}} step-icon"></i>{{i.text}}</li>{% endfor %}
+                    </ul>
+                    <div class="mt-4">
+                        <h5 class="mb-2"><i class="{{how_to.help.icon}} step-icon"></i>{{how_to.help.title}}</h5>
+                        {% for h in how_to.help.info %}<p class="mb-1">{{h.title}} <a href="{{h.url}}">{{h.text}}</a></p>{% endfor %}
+                    </div>
+                </div>
+                <div class="alert alert-warning">
+                    <i class="{{information.icon}} me-2"></i> {{information.title}}
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="contact-form shadow">
+                    <form action="{{metadata.contact.form.formspree}}" method="POST">
+                        <div class="row">
+                            {% for f in form.info %}<div class="col-md-6">
+                                <input type="{{f.type}}" name="{{f.name}}" class="form-control" placeholder="{{f.placeholder}}" {% if f.required %}required="required"{% endif %}>
+                            </div>{% endfor %}
+                        </div>
+{% if form.show_product %}<select class="form-select mb-3" name="products" aria-label="products select example">
+  <option selected>Select product</option>
+  {% for e in collections.products | reverse %}<option value="{{e.data.title}}">{{e.data.title}}</option>{% endfor %}
+</select>{% endif %}
+                        <textarea class="form-control" rows="4" placeholder="{{form.message.placeholder}}" name="{{form.message.name}}"  {% if form.message.required %}required="required"{% endif %}></textarea>
+                        <input type="text" class="form-control" name="{{form.delivery.name}}" placeholder="{{form.delivery.placeholder}}"  {% if form.delivery.required %}required="required"{% endif %}>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-bulk">{{form.button}}</button>
+                        </div>
+                        <div class="form-text text-center mt-2">
+                            *{{form.tips}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

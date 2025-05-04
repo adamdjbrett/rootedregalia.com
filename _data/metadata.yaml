@@ -28,7 +28,7 @@ navbar:
       url: /#contact
  button: 
     title: Order Now
-    url: /#order
+    url: /order
 
 widget: 
  button: 
