@@ -15,6 +15,10 @@
             text-decoration:none;
             color: var(--dark-green);
         }
+        .green {
+            background-color: var(--dark-green);
+            color: white;
+        }
         
         /* Navbar styles */
         .navbar {
@@ -291,4 +295,10 @@
 	width: 1px;
 }
 
-
+    .modal-body img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
