@@ -29,10 +29,11 @@ information:
  icon: fas fa-info-circle
 
 form: 
- show_product: true
+ group_order_title: Group Form Order
+ individual_order_title: Individual Form Order
  info: 
   - name: Name
-    placeholder: "Company / Name"
+    placeholder: "Name"
     type: "text"
     required: false
   - name: Email
@@ -43,18 +44,24 @@ form:
     placeholder: Phone Number
     type: number
     required: false
-  - name: Subject
-    placeholder: Subject
+  - name: Mailing Address
+    placeholder: Mailing Address
     type: text
     required: false
  message: 
-  name: Message
-  placeholder: Order Detail
+  name: Notes
+  placeholder: Notes
   required: true
- delivery: 
-  name: Delivery Address
-  placeholder: Delivery Address
-  required: true
+ file: 
+  name: File Upload
+  info: Upload Your Files
+  placeholder: File Upload
+ products :
+    title: Select Items
+    items: 
+    - info: "Tam"
+    - info: "Hood"
+    - info: "Gown"
  tips: "Automatic notification form, not for direct transactions."
  button: "Submit Bulk Order"
 

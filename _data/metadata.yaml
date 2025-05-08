@@ -18,12 +18,12 @@ navbar:
       url: /#
     - nav: About
       url: /#about
-    - nav: Product
-      url: /#products
     - nav: Blog
       url: /#blog
     - nav: Gallery
       url: /#gallery
+    - nav: Product
+      url: /#products
     - nav: Contact
       url: /#contact
  button: 
@@ -31,6 +31,8 @@ navbar:
     url: /order
 
 widget: 
+ group_products: Group Products
+ individual_products: Individual Products
  button: 
   product: Buy Now
   blog: Read More
