@@ -143,6 +143,13 @@
             object-fit: cover;
             transition: transform 0.5s;
         }
+        .gallery-img-cover {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
         
         .gallery-item:hover .gallery-img {
             transform: scale(1.1);
@@ -205,6 +212,11 @@
         .blog-img {
             width: 100%;
             height: 200px;
+            object-fit: cover;
+        }
+        .blog-img-cover {
+            width: 100%;
+            height: 420px;
             object-fit: cover;
         }
 

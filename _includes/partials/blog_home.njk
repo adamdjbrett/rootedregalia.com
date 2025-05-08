@@ -3,7 +3,7 @@
         <div class="row">{% for post in collections.posts | reverse | limit(1) %}
             <div class="col-md-12">
                 <div class="blog-card">
-                    <a href="{{post.url}}"><img src="{{post.data.image or metadata.image}}" alt="{{post.data.title}}" class="blog-img"></a>
+                    <a href="{{post.url}}"><img src="{{post.data.image or metadata.image}}" alt="{{post.data.title}}" class="blog-img-cover"></a>
                     <div class="blog-body">
                         <small class="blog-date"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time></small>
                         <h3 class="blog-title mt-2">{{post.data.title}}</h3>

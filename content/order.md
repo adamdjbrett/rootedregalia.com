@@ -2,7 +2,7 @@
 layout: order.njk
 title: Bulk Order Request
 description: "For businesses, resellers, or large personal needs. Get the best pricing and priority service for every bulk order—direct from trusted organic sources."
-image: /img/posts.png
+image: /img/hero.jpeg
 
 how_to:
  title: "How to Place a Bulk Order?"

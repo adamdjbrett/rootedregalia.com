@@ -1,6 +1,7 @@
 ---
 title: The fabrics we use are made from plant fiber, including hemp and cotton.
 description: The fabric shown here is 55% hemp and 45% cotton, and it is biodegradable and compostable.
+image: /img/posts.png
 date: 2025-05-09
 tags: another tag
 show_date: true
