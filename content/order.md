@@ -2,11 +2,13 @@
 layout: order.njk
 title: Bulk Order Request
 description: "For businesses, resellers, or large personal needs. Get the best pricing and priority service for every bulk order—direct from trusted organic sources."
-image: /img/hero.jpeg
+image: /img/posts.png
 
 how_to:
  title: "How to Place a Bulk Order?"
  info: 
+  - text: "Select the order type group or individual."
+    icon: fa-solid fa-bag-shopping
   - text: "Fill in and submit the order form on the side completely."
     icon: fas fa-clipboard-list
   - text: "We will contact you for details and a price quote."

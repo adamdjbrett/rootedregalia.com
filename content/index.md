@@ -10,9 +10,9 @@ hero:
  image: /img/hero.jpeg
  button: 
   - text: Group Order
-    url: /#gallery
+    url: /order
   - text: Individual Orders
-    url: /#blog
+    url: /order
 
 about:
  title: "Background"
