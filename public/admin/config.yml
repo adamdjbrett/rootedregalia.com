@@ -3,10 +3,13 @@ backend:
   name: git-gateway
   repo: githubuser/repo
   branch: main 
+
 media_folder: 'static/img'
 collections:
   - name: "metadata"
     label: "Site Configuration"
+    editor:
+      preview: false 
     files:
       - file: "_data/metadata.yaml"
         label: "Setup"
@@ -81,13 +84,13 @@ collections:
                 name: "phone"
                 widget: "object"
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - label: "Info"
-                    name: "info"
-                    widget: "list"
-                    fields:
-                      - { label: "Text", name: "text", widget: "string" }
-                        { label: "URL", name: "url", widget: "string" }
+                 - { label: "Title", name: "title", widget: "string" }
+                 - label: "Info"
+                   name: "info"
+                   widget: "list"
+                   fields:
+                     - { label: "Text", name: "text", widget: "string" }
+                     - { label: "URL", name: "url", widget: "string" }
               - label: "Email"
                 name: "email"
                 widget: "object"
@@ -98,7 +101,7 @@ collections:
                     widget: "list"
                     fields:
                       - { label: "Text", name: "text", widget: "string" }
-                        { label: "URL", name: "url", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
               - label: "Form"
                 name: "form"
                 widget: "object"
@@ -140,12 +143,13 @@ collections:
 
   - name: "homepage"
     label: "Homepage"
+    editor:
+      preview: false 
     files:
       - file: "content/index.md"
         label: "Homepage Content"
         name: "index"
         fields:
-          - { label: "Layout", name: "layout", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
@@ -226,18 +230,273 @@ collections:
                   - { label: "Text", name: "text", widget: "string" }
                   - { label: "URL", name: "url", widget: "string" }
 
-
-  - name: 'pages'
-    label: 'Pages'
-    folder: 'src/pages'
-    slug: '{{slug}}'
-    create: true
+  - name: "blogset"
+    label: "Blog Setup"
     editor:
-      preview: false
+      preview: false 
+    files:
+      - file: "content/blog.md"
+        label: "Blog Page Setup"
+        name: "blog"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - { label: "Size", name: "size", widget: "number", value_type: "int", min: 1 }
+              - { label: "Reverse", name: "reverse", widget: "boolean" }
+
+
+  - name: "blog"
+    label: "Blog Posts"
+    editor:
+      preview: false 
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
     fields:
-      - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'description', label: 'Description', widget: 'text' }
-      - { name: 'image', label: 'Image', widget: 'image' }
-      - { name: 'slug', label: 'Title', widget: 'string' }
-      - { name: 'body', label: 'Body', widget: 'markdown' } 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Tags", name: "tags", widget: "string", required: false }
+      - { label: "Show Date", name: "show_date", widget: "boolean", required: false, default: true }
+      - { label: "Show Article", name: "show_article", widget: "boolean", required: false, default: true }
+      - { label: "Show Product", name: "show_product", widget: "boolean", required: false, default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
+  - name: "gallerypages"
+    label: "Gallery Setup"
+    editor:
+      preview: false 
+    files:
+      - file: "content/gallery.md"
+        label: "Gallery Page Config"
+        name: "gallery"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image", required: false }          
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - { label: "Size", name: "size", widget: "number", value_type: "int", min: 1 }
+              - { label: "Reverse", name: "reverse", widget: "boolean" }          
+
+
+  - name: "galleries"
+    label: "Galleries"
+    editor:
+      preview: false 
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+
+  - name: "grouproducts"
+    label: "Group Product Setup"
+    editor:
+      preview: false 
+    files:
+      - file: "content/group_products.md"
+        label: "Group Products Page Configuration"
+        name: "group_products"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - { label: "Size", name: "size", widget: "number", value_type: "int", min: 1 }
+              - { label: "Reverse", name: "reverse", widget: "boolean" }
+
+  - name: "groupproduct"
+    label: "Group Products Post"
+    editor:
+      preview: false 
+    folder: "content/product/group"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Show Date", name: "show_date", widget: "boolean", default: false }
+      - { label: "Show Article", name: "show_article", widget: "boolean", default: true }
+      - { label: "Show Product", name: "show_product", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
+  - name: "indiviroducts"
+    label: "Individual Product Setup"
+    editor:
+      preview: false 
+    files:
+      - file: "content/individual_products.md"
+        label: "Individual Products Page Configuration"
+        name: "individual_products"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - { label: "Size", name: "size", widget: "number", value_type: "int", min: 1 }
+              - { label: "Reverse", name: "reverse", widget: "boolean" }
+
+  - name: "individualproduct"
+    label: "Individual Products Post"
+    editor:
+      preview: false 
+    folder: "content/product/individual"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Show Date", name: "show_date", widget: "boolean", default: false }
+      - { label: "Show Article", name: "show_article", widget: "boolean", default: true }
+      - { label: "Show Product", name: "show_product", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
+  - name: "orderpages"
+    label: "Order Pages"
+    editor:
+      preview: false 
+    files:
+      - file: "content/order.md"
+        label: "Bulk Order Page"
+        name: "order"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+          
+          - label: "How To"
+            name: "how_to"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string" }
+              - label: "Help"
+                name: "help"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - label: "Info"
+                    name: "info"
+                    widget: "list"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
+          
+          - label: "Information"
+            name: "information"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+          
+          - label: "Form"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Group Order Title", name: "group_order_title", widget: "string" }
+              - { label: "Individual Order Title", name: "individual_order_title", widget: "string" }
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Placeholder", name: "placeholder", widget: "string" }
+                  - { label: "Type", name: "type", widget: "string" }
+                  - { label: "Required", name: "required", widget: "boolean", required: false }
+              - label: "Message"
+                name: "message"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Placeholder", name: "placeholder", widget: "string" }
+                  - { label: "Required", name: "required", widget: "boolean", required: false }
+              - label: "File"
+                name: "file"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Info", name: "info", widget: "string" }
+                  - { label: "Placeholder", name: "placeholder", widget: "string" }
+              - label: "Products"
+                name: "products"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Info", name: "info", widget: "string" }
+              - { label: "Tips", name: "tips", widget: "string" }
+              - { label: "Button", name: "button", widget: "string" }
+          
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Info"
+                name: "info"
+                widget: "list"
+                fields:
+                  - { label: "FAQ ID", name: "faq_id", widget: "string" }
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer", name: "a", widget: "text" }
+          
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - label: "Home"
+                name: "home"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Gallery"
+                name: "gallery"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
 
