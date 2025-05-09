@@ -7,7 +7,7 @@ layout: base.njk
 <h2>{{description}}</h2>
 </div>
         <div class="row">{% for p in pagination.items |reverse  %}
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card shadow-sm">
                     {% if p.data.image %}<a href="{{p.url}}"><img src="{{p.data.image}}" class="card-img-top" alt="{{p.data.title}}"></a>{% endif %}
                     <div class="card-body">

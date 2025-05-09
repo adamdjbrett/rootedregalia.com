@@ -1,20 +1,20 @@
 <section class="py-5" style="background-color: #f8f9fa;" id="gallery">
  
   <div class="container">
-    <h2 class="section-title">Our Gallery</h2>
+    <h2 class="section-title mb-5">{{gallery.title}}</h2>
     <div class="row g-3">
-      {% for i in collections.galleries | reverse | limit(1) %}
-      <div class="col-md-12">
-        <div class="gallery-item">
-          <a href="{{gallery.button.url}}">
-            <img src="{{gallery.image or metadata.image}}" alt="{{i.data.title}}" class="gallery-img-cover">
-          </a>
-          <h3 class="mt-5 text-center">
-            {{gallery.intro}}<br/><a href="{{gallery.button.url}}" class="btn btn-order mt-3">{{gallery.button.text}}</a>
-          </h3>
-        </div>
-      </div>
-      {% endfor %}
+<div class="col-md-4 col-6 p-0">
+<a href="{{gallery.button.url}}"><img alt="{{gallery.title}}" class="img-gallery" src="{{gallery.image1}}"/></a>
+</div>
+<div class="col-md-4 col-6 p-0">
+<a href="{{gallery.button.url}}"><img alt="{{gallery.title}}" class="img-gallery" src="{{gallery.image2}}"/></a>
+</div>
+<div class="col-md-4 col-12 p-0">
+<a href="{{gallery.button.url}}"><img alt="{{gallery.intro}}" class="img-gallery-cover" src="{{gallery.image3}}"/></a>
+</div>
+<div class="col-md-12 p-3 p-md-5 text-center">
+<h2 class="col-md-6 col-8 mx-auto p-3 p-md-5"><strong>{{gallery.intro}}</strong></h2>
+</div>
     </div>
   </div>
 </section>

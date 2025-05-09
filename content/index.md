@@ -39,7 +39,9 @@ blog:
 
 gallery: 
  title: Our Gallery
- image: /img/products.jpeg
+ image1: /img/products.png
+ image2: /img/products.jpeg
+ image3: /img/posts.png
  intro: "Rooted Regalia is proudly woman owned and family run!"
  button: 
   text: View Full Gallery
