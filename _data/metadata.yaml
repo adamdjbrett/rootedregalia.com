@@ -1,5 +1,5 @@
 title: "rootedregalia.com"
-description: "Graduation gowns made in the USA from fabric made of plant based fiber,and made by fairly paid sewers"
+description: "Graduation gowns made in the USA from fabric made of plant based fiber"
 image: "/img/hero.jpeg"
 language: "en"
 locale: en_US
@@ -18,10 +18,10 @@ navbar:
       url: /#
     - nav: About
       url: /#about
-    - nav: Blog
-      url: /#blog
     - nav: Gallery
       url: /#gallery
+    - nav: Blog
+      url: /#blog
     - nav: Product
       url: /#products
     - nav: Contact
@@ -44,7 +44,7 @@ contact:
  location:
   title: location
   info: 
-   - text: "Rooted Regalia , 201 Scott Avenue"
+   - text: "Rooted Regalia , 308 Waldorf Parkway"
    - text: "Syracuse NY 13224"
  phone:
   title: Phone

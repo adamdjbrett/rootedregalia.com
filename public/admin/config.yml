@@ -160,6 +160,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Credit", name: "credit", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - label: "Button"
                 name: "button"
@@ -208,6 +209,7 @@ collections:
             name: "products"
             widget: "object"
             fields:
+              - { label: "Title", name: "title", widget: "string" }
               - label: "Group"
                 name: "group"
                 widget: "object"
