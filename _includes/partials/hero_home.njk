@@ -2,6 +2,6 @@
 <div class="container hero-content text-center">
 <h1>{{ hero.title or title }}</h1>
 <h2 class="lead mb-5">{{hero.text or description }}</h2>
-{% for b in hero.button %}<a href="{{b.url}}" class="btn btn-order btn-lg me-2">{{b.text}}</a>{% endfor %}
+{% for b in hero.button %}<a href="{{b.url}}" class="btn btn-order btn-lg me-2 mb-2">{{b.text}}</a>{% endfor %}
 </div>
 </section>

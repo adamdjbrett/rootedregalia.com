@@ -18,18 +18,30 @@
             </div>
             <div class="col-lg-7">
                 <div class="contact-form shadow">
-                    <form action="{{metadata.contact.form.formspree}}" method="POST">
+
+<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active bg-success" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">{{form.group_order_title}}</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link bg-success" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">{{form.individual_order_title}}</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+<form action="{{metadata.contact.form.formspree}}" method="POST" enctype="multipart/form-data">
                         <div class="row">
+<div class="col-md-12 mb-3"><h3>{{form.group_order_title}}</h3></div>
                             {% for f in form.info %}<div class="col-md-6">
                                 <input type="{{f.type}}" name="{{f.name}}" class="form-control" placeholder="{{f.placeholder}}" {% if f.required %}required="required"{% endif %}>
                             </div>{% endfor %}
                         </div>
-{% if form.show_product %}<select class="form-select mb-3" name="products" aria-label="products select example">
-  <option selected>Select product</option>
-  {% for e in collections.products | reverse %}<option value="{{e.data.title}}">{{e.data.title}}</option>{% endfor %}
-</select>{% endif %}
+
                         <textarea class="form-control" rows="4" placeholder="{{form.message.placeholder}}" name="{{form.message.name}}"  {% if form.message.required %}required="required"{% endif %}></textarea>
-                        <input type="text" class="form-control" name="{{form.delivery.name}}" placeholder="{{form.delivery.placeholder}}"  {% if form.delivery.required %}required="required"{% endif %}>
+<div class="mb-3">
+  <label for="formFile" class="form-label">{{form.file.info}}</label>
+  <input class="form-control" type="file" id="formFile" type="file" name="{{form.file.name}}">
+</div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-bulk">{{form.button}}</button>
                         </div>
@@ -37,6 +49,39 @@
                             *{{form.tips}}
                         </div>
                     </form>
+
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+<form action="{{metadata.contact.form.formspree}}" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+<div class="col-md-12 mb-3"><h3>{{form.individual_order_title}}</h3></div>
+                            {% for f in form.info %}<div class="col-md-6">
+                                <input type="{{f.type}}" name="{{f.name}}" class="form-control" placeholder="{{f.placeholder}}" {% if f.required %}required="required"{% endif %}>
+                            </div>{% endfor %}
+                        </div>
+
+                        <textarea class="form-control" rows="4" placeholder="{{form.message.placeholder}}" name="{{form.message.name}}"  {% if form.message.required %}required="required"{% endif %}></textarea>
+<p>{{form.products.title}}</p>
+{% for n in form.products.items %}<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="{{n.info}}" id="check{{n.info}}">
+  <label class="form-check-label" for="check{{n.info}}" value="{{n.info}}">
+   {{n.info}}
+  </label>
+</div>{% endfor %}
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-bulk">{{form.button}}</button>
+                        </div>
+                        <div class="form-text text-center mt-2">
+                            *{{form.tips}}
+                        </div>
+                    </form>
+</div>
+</div>
+
+
+
+                    
                 </div>
             </div>
         </div>

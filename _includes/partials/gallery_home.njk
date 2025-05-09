@@ -3,32 +3,18 @@
   <div class="container">
     <h2 class="section-title">Our Gallery</h2>
     <div class="row g-3">
-      {% for i in collections.galleries | reverse | limit(6) %}
-      {% set uniqueId = "gallery-" + loop.index %}
-      <div class="col-md-4">
+      {% for i in collections.galleries | reverse | limit(1) %}
+      <div class="col-md-12">
         <div class="gallery-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#{{uniqueId}}Modal">
-            <img src="{{i.data.image}}" alt="{{i.data.title}}" class="gallery-img">
+          <a href="{{gallery.button.url}}">
+            <img src="{{gallery.image or metadata.image}}" alt="{{i.data.title}}" class="gallery-img-cover">
           </a>
-        </div>
-      </div>
-      <div class="modal fade" id="{{uniqueId}}Modal" tabindex="-1" aria-labelledby="{{uniqueId}}ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header green">
-              <h1 class="modal-title fs-5" id="{{uniqueId}}ModalLabel">{{i.data.title}}</h1>
-              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body d-flex justify-content-center align-items-center">
-              <img class="img-fluid" alt="{{i.data.title}}" src="{{i.data.image}}"/>
-            </div>
-          </div>
+          <h3 class="mt-5 text-center">
+            {{gallery.intro}}<br/><a href="{{gallery.button.url}}" class="btn btn-order mt-3">{{gallery.button.text}}</a>
+          </h3>
         </div>
       </div>
       {% endfor %}
-    </div>
-    <div class="text-center mt-4">
-      <a href="{{gallery.button.url}}" class="btn btn-order">{{gallery.button.text}}</a>
     </div>
   </div>
 </section>

@@ -7,6 +7,8 @@ image: /img/hero.jpeg
 how_to:
  title: "How to Place a Bulk Order?"
  info: 
+  - text: "Select the order type group or individual."
+    icon: fa-solid fa-bag-shopping
   - text: "Fill in and submit the order form on the side completely."
     icon: fas fa-clipboard-list
   - text: "We will contact you for details and a price quote."
@@ -29,10 +31,11 @@ information:
  icon: fas fa-info-circle
 
 form: 
- show_product: true
+ group_order_title: Group Form Order
+ individual_order_title: Individual Form Order
  info: 
   - name: Name
-    placeholder: "Company / Name"
+    placeholder: "Name"
     type: "text"
     required: false
   - name: Email
@@ -43,18 +46,24 @@ form:
     placeholder: Phone Number
     type: number
     required: false
-  - name: Subject
-    placeholder: Subject
+  - name: Mailing Address
+    placeholder: Mailing Address
     type: text
     required: false
  message: 
-  name: Message
-  placeholder: Order Detail
+  name: Notes
+  placeholder: Notes
   required: true
- delivery: 
-  name: Delivery Address
-  placeholder: Delivery Address
-  required: true
+ file: 
+  name: File Upload
+  info: Upload Your Files
+  placeholder: File Upload
+ products :
+    title: Select Items
+    items: 
+    - info: "Tam"
+    - info: "Hood"
+    - info: "Gown"
  tips: "Automatic notification form, not for direct transactions."
  button: "Submit Bulk Order"
 
