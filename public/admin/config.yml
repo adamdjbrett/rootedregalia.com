@@ -175,6 +175,35 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
 
+          - label: "Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image 1", name: "image1", widget: "image" }
+              - { label: "Image 2", name: "image2", widget: "image" }
+              - { label: "Image 3", name: "image3", widget: "image" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+          - label: "Blog"
+            name: "blog"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
           - label: "Products"
             name: "products"
             widget: "object"
@@ -202,33 +231,6 @@ collections:
                     fields:
                       - { label: "Text", name: "text", widget: "string" }
                       - { label: "URL", name: "url", widget: "string" }
-
-          - label: "Blog"
-            name: "blog"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - label: "Button"
-                name: "button"
-                widget: "object"
-                fields:
-                  - { label: "Text", name: "text", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
-
-          - label: "Gallery"
-            name: "gallery"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Intro", name: "intro", widget: "text" }
-              - label: "Button"
-                name: "button"
-                widget: "object"
-                fields:
-                  - { label: "Text", name: "text", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
 
   - name: "blogset"
     label: "Blog Setup"
