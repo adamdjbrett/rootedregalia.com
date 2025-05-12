@@ -39,6 +39,10 @@ blog:
   text: View All Posts
   url: /blog/ 
 
+donate:
+ text: "A portion of profits will be donated to land restoration."
+ image: /img/land.jpg
+
 gallery: 
  title: Our Gallery
  image1: /img/products.png
@@ -48,7 +52,5 @@ gallery:
  button: 
   text: View Full Gallery
   url: /gallery/ 
-
-
 ---
 
