@@ -4,11 +4,13 @@ image: "/img/hero.jpeg"
 language: "en"
 locale: en_US
 favicon: /img/logo.png
-url: "http://localhost:8080"
+#url: "http://localhost:8080"
+url: "https://rootedregalia.com"
 metasocial: 
- - facebook: "https://www.facebook.com/"
- - twitteruser: "@username"
- - twitter: "https://x.com/user"
+ - facebook: "https://www.facebook.com/sharon.moran.902"
+ - linkedin: "https://www.linkedin.com/in/sharon-moran-1b0a4b1a/"
+ #- twitteruser: "@username"
+ #- twitter: "https://x.com/user"
 
 navbar: 
  title: "Rooted Regalia"
@@ -65,27 +67,27 @@ footer:
  logo: /img/logo.png
  intro: 
    text: rootedregalia.com
-   text1: Develop By
+   text1: Developed By
    text2: Adam DJ Brett
    text2_url: https://adamdjbrett.com
  social: 
-    - title: Visit my Github
-      icon: fab fa-github
-      url: https://github.com/user
-    - title: Be Friends on Facebook
+#    - title: Visit my Github
+#      icon: fab fa-github
+#      url: https://github.com/user
+    - title: Lets be friends on Facebook
       icon: fab fa-facebook
-      url: https://facebook.com/user
-    - title: Follow my Twitter
-      icon: fab fa-twitter
-      url: https://x.com/user
-    - title: Subs my chanel
-      icon: fab fa-youtube
-      url: https://youtube.com/user
+      url: https://www.facebook.com/sharon.moran.902
+    - title: Follow me on linkedin
+      icon: fab fa-linkedin
+      url: https://www.linkedin.com/in/sharon-moran-1b0a4b1a/
+#    - title: Subs my chanel
+#      icon: fab fa-youtube
+#      url: https://youtube.com/user
 
 author: 
- name: "Jhon Dhoe"
- image: "/img/kimia-kazemi--gbBWj7KnnQ-unsplash.jpg"
- about: "Illustration by kimia kazemi on Unsplash"
- email: "info@adamdjbrett.com"
- url: "https://www.adamdjbrett.com"
- phone: "+123456789"
+ name: "Sharon Moran"
+ image: "/img/sharon-moran.jpeg"
+ about: "Sharon Moran Profile Photo"
+ email: "rootedregalia@gmail.com"
+ url: "https://rootedregalia.com"
+ #phone: "+123456789"
