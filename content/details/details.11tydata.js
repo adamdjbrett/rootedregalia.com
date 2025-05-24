@@ -1,8 +1,8 @@
 export default {
-	tags: [
-		"individualproducts"
-	],
-	"layout": "post.njk",
+  tags: [
+    "posts"
+  ],
+  "layout": "post.njk",
   
   eleventyComputed: {
     eleventyExcludeFromCollections: data => 
@@ -10,6 +10,7 @@ export default {
     permalink: data => 
       data.draft === true ? false : data.permalink,
     tags: data => 
-      data.draft === true ? [] : (data.tags || ["individualproducts"])
+      data.draft === true ? [] : (data.tags || ["posts"])
   }
 };
+

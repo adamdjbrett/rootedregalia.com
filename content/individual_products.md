@@ -5,7 +5,7 @@ description: Individual Product Description.
 image: 
 pagination:
   data: collections.individualproducts
-  size: 2
+  size: 9
   reverse: true
 testdata:
  - item1

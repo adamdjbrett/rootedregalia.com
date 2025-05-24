@@ -5,7 +5,7 @@ description: Group Product Description.
 image: 
 pagination:
   data: collections.groupproducts
-  size: 2
+  size: 9
   reverse: true
 testdata:
  - item1

@@ -11,26 +11,49 @@ layout: base.njk
 {% for i in pagination.items %}
 {% set uniqueId = "gallery-" + loop.index %}
 <div class="col-md-4">
-<div class="gallery-item">
-<a href="#" data-bs-toggle="modal" data-bs-target="#{{uniqueId}}Modal">
-<img src="{{i.data.image}}" alt="{{i.data.title}}" class="gallery-img">
-</a>
-</div>
+  <div class="gallery-item">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#{{uniqueId}}Modal">
+      <img src="{{i.data.image}}" alt="{{i.data.title}}" class="gallery-img">
+    </a>
+  </div>
 </div>
 <div class="modal fade" id="{{uniqueId}}Modal" tabindex="-1" aria-labelledby="{{uniqueId}}ModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg">
-<div class="modal-content">
-<div class="modal-header green">
-<h1 class="modal-title fs-5" id="{{uniqueId}}ModalLabel">{{i.data.title}}</h1>
-<button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body d-flex justify-content-center align-items-center">
-<img class="img-fluid" alt="{{i.data.title}}" src="{{i.data.image}}"/>
-</div>
-</div>
-</div>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header green">
+        <h1 class="modal-title fs-5" id="{{uniqueId}}ModalLabel">{{i.data.title}}</h1>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body gallery-modal-body position-relative d-flex justify-content-center align-items-center">
+        {% if not loop.first %}
+        <button type="button" class="btn btn-arrow btn-arrow-left"
+          data-bs-target="#gallery-{{ loop.index - 1 }}Modal"
+          data-bs-toggle="modal" data-bs-dismiss="modal"
+          aria-label="Sebelumnya">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </button>
+        {% endif %}
+
+        <img class="img-fluid" alt="{{i.data.title}}" src="{{i.data.image}}"/>
+
+        {% if not loop.last %}
+        <button type="button" class="btn btn-arrow btn-arrow-right"
+          data-bs-target="#gallery-{{ loop.index + 1 }}Modal"
+          data-bs-toggle="modal" data-bs-dismiss="modal"
+          aria-label="Berikutnya">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L12.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>
+        </button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 {% endfor %}
+
 <div class="row mt-5">
 <div class="col-6">
 {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="btn btn-card text-white p-2">

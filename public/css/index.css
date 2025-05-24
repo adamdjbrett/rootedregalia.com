@@ -1,16 +1,32 @@
+/*
         :root {
             --primary-green: #606C38;
             --dark-green: #283618;
             --cream: #FEFAE0;
             --light-brown: #DDA15E;
             --dark-brown: #BC6C25;
+            --dark: #000;
         }
-        
+  */      
+        :root {
+            --primary-green: #046A38;
+            --dark-green: 	#046A38;
+            --cream: #FFC72C;
+            --light-brown: #DDA15E;
+            --dark-brown: #693F23;
+            --dark: #000;
+        }
+
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--cream);
-            color: var(--dark-green);
+            color: var(--dark);
+            font-size: 1.2rem;
         }
+
+.rounder {border-radius: 25px;}
+
+.yellow {background-color: var(--cream);}
         a {
             text-decoration:none;
             color: var(--dark-green);
@@ -43,7 +59,7 @@
         }
         
         .btn-order {
-            background-color: var(--light-brown);
+            background-color: var(--cream);
             color: var(--dark-green);
             font-weight: bold;
             padding: 8px 20px;
@@ -178,7 +194,7 @@
 
         .btn-contact {
             background-color: var(--light-brown);
-            color: var(--dark-green);
+            color: var(--light-green);
             font-weight: bold;
             border-radius: 30px;
             padding: 10px 30px;
@@ -190,7 +206,7 @@
             background-color: var(--dark-brown);
             color: var(--cream);
         }
-
+.whites {background-color: #fff;}
         /* Section title */
         .section-title {
             color: var(--primary-green);
@@ -231,7 +247,7 @@
         }
 
         .blog-date {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: #8d8b7d;
         }
 
@@ -247,7 +263,7 @@
         }
         .blog-meta {
             color: #bdb88d;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             margin-bottom: 0.5rem;
         }
         .blog-content {
@@ -285,7 +301,7 @@
             object-fit: cover;
         }
         .related-articles .card-title {
-            font-size: 1.05rem;
+            font-size: 1.29rem;
             color: var(--dark-green);
             font-weight: 600;
         }
@@ -419,3 +435,47 @@ object-fit:cover;
 transition: transform 0.5s;
 }
 }
+
+
+.gallery-modal-body {
+  position: relative;
+  min-height: 250px;
+}
+
+.btn-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  background: rgba(0,0,0,0.24);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 1;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-arrow:hover {
+  background: rgba(4,106,56,0.84);
+  color: var(--cream);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn-arrow-left {
+  left: 12px;
+}
+
+.btn-arrow-right {
+  right: 12px;
+}
+
+/* Tambahkan ini jika ingin mengontrol ukuran SVG */
+.btn-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+

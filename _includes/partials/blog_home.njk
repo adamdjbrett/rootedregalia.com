@@ -1,4 +1,5 @@
-    <section class="container py-5" id="blog">
+    <section class="container-fluid bg-light" id="details">
+    <div class="container py-5">
         <h2 class="section-title">{{blog.title}}</h2>
         <div class="row">{% for post in collections.posts | reverse | limit(1) %}
             <div class="col-md-12">
@@ -15,4 +16,5 @@
         <div class="text-center mt-4">
             <a href="{{blog.button.url}}" class="btn btn-order">{{blog.button.text}}</a>
         </div>
+    </div>
     </section>

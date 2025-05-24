@@ -1,28 +1,29 @@
+<div class="containter-fluid bg-light mt-5">
 {% if show_product %}
-        <section class="related-articles my-5 container">
+        <section class="related-articles my-3 py-5 container">
             <h3 class="section-title">{{metadata.widget.group_products}}</h3>
             <div class="row">{% for post in collections.groupproducts | reverse | limit(3) %}
                 <div class="col-md-4">
                     <div class="card mb-3">
                         {% if post.data.image %}<a href="{{post.url}}"><img src="{{post.data.image}}" class="card-img-top" alt="{{post.data.title}}"></a>{% endif %}
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{{post.url}}">{{post.data.title}}</a></h5>
-                            <p class="card-text" style="font-size:0.95rem;">{{post.data.description}}</p>
+                            <h5 class="card-title"><strong><a href="{{post.url}}">{{post.data.title}}</a></strong></h5>
+                            <p>{{post.data.description}}</p>
                             <a href="{{post.url}}" class="btn btn-card btn-sm text-white">{{metadata.widget.button.product}}</a>
                         </div>
                     </div>
                 </div>{% endfor %}
             </div>
         </section>
-        <section class="related-articles my-5 container">
+        <section class="related-articles container  mb-3 my-3">
             <h3 class="section-title">{{metadata.widget.individual_products}}</h3>
             <div class="row">{% for post in collections.individualproducts | reverse | limit(3) %}
                 <div class="col-md-4">
                     <div class="card mb-3">
                         {% if post.data.image %}<a href="{{post.url}}"><img src="{{post.data.image}}" class="card-img-top" alt="{{post.data.title}}"></a>{% endif %}
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{{post.url}}">{{post.data.title}}</a></h5>
-                            <p class="card-text" style="font-size:0.95rem;">{{post.data.description}}</p>
+                            <h5 class="card-title"><strong><a href="{{post.url}}">{{post.data.title}}</a></strong></h5>
+                            <p>{{post.data.description}}</p>
                             <a href="{{post.url}}" class="btn btn-card btn-sm text-white">{{metadata.widget.button.product}}</a>
                         </div>
                     </div>
@@ -31,15 +32,15 @@
         </section>
 {% endif %}
 {% if show_article %}
-        <section class="related-articles my-5 container">
+        <section class="related-articles container my-3 mb-3">
             <h3 class="section-title">Lastest Articles</h3>
             <div class="row">{% for post in collections.posts | reverse | limit(3) %}
                 <div class="col-md-4">
                     <div class="card mb-3">
                         {% if post.data.image %}<a href="{{post.url}}"><img src="{{post.data.image}}" class="card-img-top" alt="{{post.data.title}}"></a>{% endif %}
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{{post.url}}">{{post.data.title}}</a></h5>
-                            <p class="card-text" style="font-size:0.95rem;">{{post.data.description}}</p>
+                            <h5 class="card-title"><strong><a href="{{post.url}}">{{post.data.title}}</a></strong></h5>
+                            <p>{{post.data.description}}</p>
                             <a href="{{post.url}}" class="btn btn-card btn-sm text-white">{{metadata.widget.button.blog}}</a>
                         </div>
                     </div>
@@ -47,4 +48,4 @@
             </div>
         </section>
 {% endif %}
-    </div>
+</div>
