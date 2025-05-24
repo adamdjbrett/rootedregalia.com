@@ -25,7 +25,7 @@ navbar:
     - nav: Details
       url: /#details
     - nav: Product
-      url: /#products
+      url: /products
 #    - nav: Contact
 #      url: /#contact
  button: 

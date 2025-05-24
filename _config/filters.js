@@ -28,10 +28,6 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("getKeys", target => {
 		return Object.keys(target);
 	});
-eleventyConfig.addCollection("publishedDetails", function(collection) {
-  return collection.getFilteredByGlob("content/details/*.md")
-    .filter(post => post.data.status !== "draft");
-});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "posts" , "products","galleries"].indexOf(tag) === -1);

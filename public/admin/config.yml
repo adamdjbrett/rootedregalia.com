@@ -276,6 +276,7 @@ collections:
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Save as Draft", name: "draft", widget: "boolean", required: false, default: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image",required: false }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
@@ -317,6 +318,7 @@ collections:
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Save as Draft", name: "draft", widget: "boolean", required: false, default: false }
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Image", name: "image", widget: "image", required: false }
@@ -352,6 +354,7 @@ collections:
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Save as Draft", name: "draft", widget: "boolean", required: false, default: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Image", name: "image", widget: "image" }
@@ -392,6 +395,7 @@ collections:
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Save as Draft", name: "draft", widget: "boolean", required: false, default: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Image", name: "image", widget: "image" }
