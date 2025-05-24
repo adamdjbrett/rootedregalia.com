@@ -11,7 +11,7 @@ metasocial:
  - linkedin: "https://www.linkedin.com/in/sharon-moran-1b0a4b1a/"
  #- twitteruser: "@username"
  #- twitter: "https://x.com/user"
-
+id_google_analytics: "Y006NS2WEW"
 navbar: 
  title: "Rooted Regalia"
  logo: "/img/logo.png" 
@@ -22,15 +22,15 @@ navbar:
       url: /#about
     - nav: Gallery
       url: /#gallery
-    - nav: Blog
-      url: /#blog
+    - nav: Details
+      url: /#details
     - nav: Product
       url: /#products
-    - nav: Contact
-      url: /#contact
+#    - nav: Contact
+#      url: /#contact
  button: 
-    title: Order Now
-    url: /order
+    title: Contact Us
+    url: /#contact
 
 widget: 
  group_products: Group Products

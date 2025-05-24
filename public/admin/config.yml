@@ -3,7 +3,8 @@ backend:
   name: git-gateway
   repo: githubuser/repo
   branch: main 
-
+publish_mode: editorial_workflow
+logo_url: /admin/logos.jpg
 media_folder: 'static/img'
 collections:
   - name: "metadata"
@@ -20,6 +21,7 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Language", name: "language", widget: "string" }
+          - { label: "Google Analytics ID", name: "id_google_analytics", widget: "string" }
           - { label: "Locale", name: "locale", widget: "string" }
           - { label: "Favicon", name: "favicon", widget: "image" }
           - { label: "URL", name: "url", widget: "string" }
@@ -61,7 +63,7 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Product", name: "product", widget: "string" }
-                  - { label: "Blog", name: "blog", widget: "string" }
+                  - { label: "Details", name: "blog", widget: "string" }
                   - { label: "Gallery", name: "gallery", widget: "string" }
 
           - label: "Contact"
@@ -139,7 +141,7 @@ collections:
               - { label: "About", name: "about", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
-              - { label: "Phone", name: "phone", widget: "string" }
+           #   - { label: "Phone", name: "phone", widget: "string" }
 
   - name: "homepage"
     label: "Homepage"
@@ -200,7 +202,7 @@ collections:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
 
-          - label: "Blog"
+          - label: "Details"
             name: "blog"
             widget: "object"
             fields:
@@ -213,42 +215,42 @@ collections:
                   - { label: "Text", name: "text", widget: "string" }
                   - { label: "URL", name: "url", widget: "string" }
 
-          - label: "Products"
-            name: "products"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - label: "Group"
-                name: "group"
-                widget: "object"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - label: "Button"
-                    name: "button"
-                    widget: "object"
-                    fields:
-                      - { label: "Text", name: "text", widget: "string" }
-                      - { label: "URL", name: "url", widget: "string" }
+#          - label: "Products"
+#            name: "products"
+#            widget: "object"
+#            fields:
+#              - { label: "Title", name: "title", widget: "string" }
+#              - label: "Group"
+#                name: "group"
+#                widget: "object"
+#                fields:
+#                  - { label: "Title", name: "title", widget: "string" }
+#                  - label: "Button"
+#                    name: "button"
+#                    widget: "object"
+#                    fields:
+#                      - { label: "Text", name: "text", widget: "string" }
+#                      - { label: "URL", name: "url", widget: "string" }
 
-              - label: "Individual"
-                name: "individual"
-                widget: "object"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - label: "Button"
-                    name: "button"
-                    widget: "object"
-                    fields:
-                      - { label: "Text", name: "text", widget: "string" }
-                      - { label: "URL", name: "url", widget: "string" }
+ #             - label: "Individual"
+#                name: "individual"
+#                widget: "object"
+#                fields:
+#                  - { label: "Title", name: "title", widget: "string" }
+#                  - label: "Button"
+#                    name: "button"
+#                    widget: "object"
+#                    fields:
+#                      - { label: "Text", name: "text", widget: "string" }
+#                      - { label: "URL", name: "url", widget: "string" }
 
   - name: "blogset"
-    label: "Blog Setup"
+    label: "Details Setup"
     editor:
       preview: false 
     files:
-      - file: "content/blog.md"
-        label: "Blog Page Setup"
+      - file: "content/details.md"
+        label: "Details Page Setup"
         name: "blog"
         fields:
           - { label: "Title", name: "title", widget: "string" }
@@ -263,17 +265,19 @@ collections:
               - { label: "Reverse", name: "reverse", widget: "boolean" }
 
 
-  - name: "blog"
-    label: "Blog Posts"
+  - name: "details"
+    label: "Details Posts"
     editor:
       preview: false 
-    folder: "content/blog"
+    folder: "content/details"
     create: true
     slug: "{{slug}}"
+    
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image",required: false }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Tags", name: "tags", widget: "string", required: false }
       - { label: "Show Date", name: "show_date", widget: "boolean", required: false, default: true }
@@ -309,6 +313,7 @@ collections:
     folder: "content/gallery"
     create: true
     slug: "{{slug}}"
+    
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -340,6 +345,7 @@ collections:
     label: "Group Products Post"
     editor:
       preview: false 
+    
     folder: "content/product/group"
     create: true
     slug: "{{slug}}"
@@ -382,6 +388,7 @@ collections:
     folder: "content/product/individual"
     create: true
     slug: "{{slug}}"
+    
     extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
