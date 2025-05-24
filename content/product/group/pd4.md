@@ -6,6 +6,7 @@ image: /img/logos.jpg
 show_date: false
 show_article: true
 show_product: true
+draft: false
 ---
 Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok Product  lorep ipsum dolor siamet amet jabang bayi lanang wedok .
 

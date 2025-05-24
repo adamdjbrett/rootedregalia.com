@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Blogs
-description: Update blog article.
+title: Details
+description: Update details article.
 image: 
 pagination:
   data: collections.posts
@@ -12,7 +12,7 @@ testdata:
  - item2
  - item3
  - item4
-permalink: "/blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "/details/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 <section class="container py-5" id="blog">
 <div class="col-md-12 p-3">

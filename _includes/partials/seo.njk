@@ -16,8 +16,8 @@
 <link href="{{metadata.favicon}}" rel="icon" type="image/x-icon">
 <link rel="apple-touch-icon" href="{{metadata.favicon}}">
 <meta content="{{metadata.metasocial.facebook}}" property="facebook:author">
-<meta content="{{metadata.metasocial.twitteruser}}" property="twitter:author">
-<meta content="{{metadata.metasocial.twitter}}" name="twitter:site">
+<meta content="{{metadata.metasocial.twitteruser or metadata.url}}" property="twitter:author">
+<meta content="{{metadata.metasocial.twitter or metadata.url}}" name="twitter:site">
 <meta property="og:type" content="website">
 <link rel="canonical" href="{{metadata.url}}{{page.url}}"/>
 <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
@@ -30,13 +30,11 @@
 <style>{% getBundle "css" %}</style>
 <link href="/css/index.css" rel="stylesheet">
 {%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
-<!-- Google Analytics -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y006NS2WEW"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-{{id_google_analytics}}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-Y006NS2WEW');
+  gtag('config', 'G-{{id_google_analytics}}');
 </script>
